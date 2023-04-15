@@ -10,7 +10,7 @@
 ## How to Use
 To use enscraft in your Minecraft Bedrock Edition game, follow these steps:
 
-1. Download the addon release from the enscraft repository.
+1. Download the latest release of the addon: https://github.com/maskulinessuffix/enscraft/releases
 
 2. Install the addon by double click on it.
 
