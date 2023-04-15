@@ -1,0 +1,60 @@
+{
+    "format_version": "1.8.0",
+    "animations": {
+        "animation.asterisk.walk": {
+            "loop": true,
+            "bones": {
+                "root": { "rotation": [ 0, 0, "Math.cos(query.anim_time * 1200) *  5.0" ]},
+                "bottomLeft": { "rotation": [ "Math.sin(query.anim_time * 1200) *  15.0", 0, 0 ]},
+                "bottomRight": { "rotation": [ "Math.cos(query.anim_time * 1200) *  15.0", 0, 0 ]},
+                "topRigth": { "rotation": [ 0, "Math.sin(query.anim_time * 1200) *  15.0", 0 ]},
+                "topLeft": { "rotation": [ 0, "Math.cos(query.anim_time * 1200) *  15.0", 0 ]},
+                "topRight": { "rotation": [ 0, "Math.sin(query.anim_time * 1200) *  15.0", 0 ]}
+            }
+        },
+        "animation.asterisk.attack1": {
+            "animation_length": 0.35,
+            "bones": {
+                "root": {
+                    "rotation": {
+                        "0.05": { "pre": [ 0, 0, 0 ], "post": [ 0, 0, 0 ], "lerp_mode": "catmullrom" },
+                        "0.35": { "post": [ 0, 360, 0 ], "lerp_mode": "catmullrom" }
+                    }
+                }
+            }
+        },
+        "animation.asterisk.attack2": {
+            "animation_length": 0.35,
+            "bones": {
+                "root": {
+                    "rotation": {
+                        "0.05": { "pre": [ 0, 0, 0 ], "post": [ 0, 0, 0 ], "lerp_mode": "catmullrom" },
+                        "0.35": { "post": [ 0, -360, 0 ], "lerp_mode": "catmullrom" }
+                    }
+                }
+            }
+        },
+        "animation.asterisk.attack3": {
+            "animation_length": 0.35,
+            "bones": {
+                "root": {
+                    "rotation": {
+                        "0.05": { "pre": [ 0, 0, 0 ], "post": [ 0, 0, 0 ], "lerp_mode": "catmullrom" },
+                        "0.35": { "post": [ 0, 0, 360 ], "lerp_mode": "catmullrom" }
+                    }
+                }
+            }
+        },
+        "animation.asterisk.attack4": {
+            "animation_length": 0.35,
+            "bones": {
+                "root": {
+                    "rotation": {
+                        "0.05": { "pre": [ 0, 0, 0 ], "post": [ 0, 0, 0 ], "lerp_mode": "catmullrom" },
+                        "0.35": { "post": [ 0, 0, -360 ], "lerp_mode": "catmullrom" }
+                    }
+                }
+            }
+        }
+    }
+}

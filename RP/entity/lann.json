@@ -1,0 +1,47 @@
+{
+    "format_version": "1.8.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "enscraft:lann",
+            "materials": {"default": "skeleton"},
+            "textures": {
+                "default": "textures/entity/lann",
+                "hurt1": "textures/entity/lann_hurt1",
+                "hurt2": "textures/entity/lann_hurt2",
+                "hurt3": "textures/entity/lann_hurt3"
+            },
+            "geometry": {"default": "geometry.lann"},
+            "scripts": {
+                "pre_animation": [
+                    "variable.attack_body_rot_y = Math.sin(360*Math.sqrt(variable.attack_time)) * 5.0;",
+                    "variable.tcos0 = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;"
+                ]
+            },
+            "animations": {
+                "attack": "animation.lann.attack",
+                "attack2": "animation.lann.attack2",
+                "summon": "animation.lann.summon",
+                "move": "animation.humanoid.move",
+                "look_at_target_default": "animation.humanoid.look_at_target.default",
+                "look_at_target_gliding": "animation.humanoid.look_at_target.gliding",
+                "look_at_target_swimming": "animation.humanoid.look_at_target.swimming"
+            },
+            "animation_controllers": [
+                {
+                    "look_at_target": "controller.animation.humanoid.look_at_target"
+                },
+                {"move": "controller.animation.humanoid.move"},
+                {"fight": "controller.animation.lann.fight"}
+            ],
+            "render_controllers": ["controller.render.lann"],
+            "particle_effects": {
+                "asterisk": "enscraft:asterisk",
+                "genderstorm": "enscraft:genderstorm"
+            },
+            "spawn_egg": {
+                "base_color": "#EA00FF",
+                "overlay_color": "#4C00FF"
+            }
+        }
+    }
+}

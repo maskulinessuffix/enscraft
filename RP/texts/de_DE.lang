@@ -1,0 +1,5 @@
+item.spawn_egg.entity.enscraft:lann.name=Ens Lann
+entity.enscraft:lann.name=Lann
+item.spawn_egg.entity.enscraft:asterisk.name=Asterisk
+entity.enscraft:asterisk.name=Asterisk
+entity.minecraft:player.name=Maskulines Suffix

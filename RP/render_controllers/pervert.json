@@ -1,0 +1,23 @@
+{
+    "format_version": "1.8.0",
+    "render_controllers": {
+        "controller.render.pervert": {
+            "geometry": "Geometry.default",
+            "arrays": {
+                "textures": {
+                    "Array.variant": [
+                        "Texture.default",
+                        "Texture.party",
+                        "Texture.naked",
+                        "Texture.sm",
+                        "Texture.swinger",
+                        "Texture.blondy",
+                        "Texture.blacky",
+                        "Texture.oldy"
+                    ]
+                }
+            },
+            "textures": ["Array.variant[ query.variant ]"]
+        }
+    }
+}

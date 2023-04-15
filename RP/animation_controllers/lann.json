@@ -1,0 +1,17 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.lann.fight": {
+            "initial_state": "idle",
+            "states": {
+                "attacking": {
+                    "animations": ["attack"],
+                    "particle_effects": [{"effect": "asterisk", "locator": "rightarm"}],
+                    "transitions": [{"dying": "query.is_stunned"}, {"idle": "variable.attack_time <= 0.0"}]
+                },
+                "idle": {"transitions": [{"dying": "query.is_stunned"}, {"attacking": "variable.has_target && variable.attack_time >= 0.0"}]},
+                "dying": {"animations": ["summon"], "particle_effects": [{"effect": "genderstorm", "locator": "ground"}]}
+            }
+        }
+    }
+}

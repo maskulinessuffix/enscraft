@@ -1,0 +1,36 @@
+{
+    "entity_sounds": {
+        "entities": {
+            "enscraft:lann": {
+                "events": {
+                    "death": { "sound": "mob.lann.dead" },
+                    "ambient": { "sound": "mob.lann.phrase" },
+                    "hurt": { "sound": "mob.lann.hurt", "pitch": [ 1, 1.4 ]},
+                    "attack": { "sound": "mob.lann.attack" }
+                },
+                "volume": [ 0.9, 1 ],
+                "pitch": [ 1, 1.1 ]
+            },
+            "enscraft:asterisk": {
+                "events": {
+                    "death": { "sound": "mob.lann.ens" },
+                    "ambient": { "sound": "mob.lann.ens" },
+                    "hurt": { "sound": "mob.lann.ens" },
+                    "attack": { "sound": "mob.lann.ens" }
+                },
+                "volume": [ 0.9, 1 ],
+                "pitch": [ 1.5, 1.8 ]
+            },
+            "enscraft:pervert": {
+                "events": {
+                    "death": { "sound": "mob.pervert.dead" },
+                    "ambient": { "sound": "mob.pervert.ambient" },
+                    "hurt": { "sound": "mob.pervert.hurt" },
+                    "attack": { "sound": "mob.pervert.attack" }
+                },
+                "volume": [ 0.9, 1 ],
+                "pitch": [ 1, 1.1 ]
+            }
+        }
+    }
+}

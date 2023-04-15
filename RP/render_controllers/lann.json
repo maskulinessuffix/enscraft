@@ -1,0 +1,23 @@
+{
+    "format_version": "1.8.0",
+    "render_controllers": {
+        "controller.render.lann": {
+            "geometry": "Geometry.default",
+            "arrays": {
+                "textures": {
+                    "Array.cracks": [
+                        "Texture.hurt3",
+                        "Texture.hurt2",
+                        "Texture.hurt1",
+                        "Texture.default"
+                    ]
+                }
+            },
+            "textures": [
+                "Array.cracks[math.clamp(query.health / 5, 0, 3)]"
+            ],
+            "is_hurt_color": {},
+            "on_fire_color": {}
+        }
+    }
+}

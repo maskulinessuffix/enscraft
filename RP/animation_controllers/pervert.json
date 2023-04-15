@@ -1,0 +1,40 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.pervert.fight": {
+            "initial_state": "idle",
+            "states": {
+                "idle": {
+                    "blend_transition": 0.2,
+                    "transitions": [
+                        {
+                            "attacking": "variable.has_target && variable.attack_time > 0.0"
+                        }
+                    ]
+                },
+                "attacking": {
+                    "blend_transition": 0.2,
+                    "animations": ["attack"],
+                    "transitions": [
+                        {"idle": "variable.attack_time <= 0.0"}
+                    ]
+                }
+            }
+        },
+        "controller.animation.pervert.long_long": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "blend_transition": 0.2,
+                    "transitions": [
+                        {"long_dong": "query.variant == 6"}
+                    ]
+                },
+                "long_dong": {
+                    "blend_transition": 0.2,
+                    "animations": ["long_dong"]
+                }
+            }
+        }
+    }
+}

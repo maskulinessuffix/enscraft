@@ -1,0 +1,30 @@
+{
+    "format_version": 2,
+    "metadata": {
+        "authors": ["Maskulines Suffix"],
+        "generated_with": {
+            "bridge": ["2.6.0"],
+            "dash": ["0.10.8"]
+        }
+    },
+    "header": {
+        "name": "Enscraft",
+        "description": "Ens Minecraft Addon mit ens Hornscheidt.",
+        "min_engine_version": [1, 19, 50],
+        "uuid": "1a036776-9b35-4f73-880b-046e5cd0303c",
+        "version": [1, 0, 0]
+    },
+    "modules": [
+        {
+            "type": "data",
+            "uuid": "f3815d9b-415e-4df9-913c-8a1a803997af",
+            "version": [1, 0, 0]
+        }
+    ],
+    "dependencies": [
+        {
+            "uuid": "70659394-c509-47d4-991e-a9f7893516e2",
+            "version": [1, 0, 0]
+        }
+    ]
+}

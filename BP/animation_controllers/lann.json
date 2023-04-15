@@ -1,0 +1,13 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.lann.basic": {
+            "initial_state": "default",
+            "states": {
+                "default": {"transitions": [{"dying": "query.is_stunned"}, {"angry": "query.is_angry"}]},
+                "angry": {"transitions": [{"dying": "query.is_stunned"}], "animations": ["angry"]},
+                "dying": {"animations": ["summon"]}
+            }
+        }
+    }
+}

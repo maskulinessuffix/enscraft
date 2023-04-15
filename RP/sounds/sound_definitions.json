@@ -1,0 +1,100 @@
+{
+    "format_version": "1.14.0",
+    "sound_definitions": {
+        "mob.lann.ens": {
+            "__use_legacy_max_distance": true,
+            "category": "neutral",
+            "sounds": [
+                "sounds/mob/lann/lann16",
+                "sounds/mob/lann/lann17"
+            ]
+        },
+        "mob.lann.phrase": {
+            "__use_legacy_max_distance": true,
+            "category": "neutral",
+            "sounds": [
+                "sounds/mob/lann/lann0",
+                "sounds/mob/lann/lann1",
+                "sounds/mob/lann/lann2",
+                "sounds/mob/lann/lann3",
+                "sounds/mob/lann/lann4",
+                "sounds/mob/lann/lann5",
+                "sounds/mob/lann/lann6",
+                "sounds/mob/lann/lann7",
+                "sounds/mob/lann/lann8",
+                "sounds/mob/lann/lann9",
+                "sounds/mob/lann/lann11",
+                "sounds/mob/lann/lann12",
+                "sounds/mob/lann/lann13",
+                "sounds/mob/lann/lann14"
+            ]
+        },
+        "mob.lann.hurt": {
+            "__use_legacy_max_distance": true,
+            "category": "neutral",
+            "sounds": [
+                "sounds/mob/lann/lann10",
+                "sounds/mob/lann/lann16",
+                "sounds/mob/lann/lann17"
+            ]
+        },
+        "mob.lann.attack": {
+            "__use_legacy_max_distance": true,
+            "category": "neutral",
+            "sounds": [
+                "sounds/mob/lann/lann4",
+                "sounds/mob/lann/lann4",
+                "sounds/mob/lann/lann9",
+                "sounds/mob/lann/lann12"
+            ]
+        },
+        "mob.lann.dead": {
+            "__use_legacy_max_distance": true,
+            "category": "neutral",
+            "sounds": [
+                "sounds/mob/lann/lann13",
+                "sounds/mob/lann/lann14"
+            ]
+        },
+        "mob.pervert.ambient": {
+            "__use_legacy_max_distance": true,
+            "category": "neutral",
+            "sounds": [
+                "sounds/mob/pervert/pervert_ambient1",
+                "sounds/mob/pervert/pervert_ambient2",
+                "sounds/mob/pervert/pervert_ambient3",
+                "sounds/mob/pervert/pervert_ambient4",
+                "sounds/mob/pervert/pervert_ambient5",
+                "sounds/mob/pervert/pervert_ambient6"
+            ]
+        },
+        "mob.pervert.attack": {
+            "__use_legacy_max_distance": true,
+            "category": "neutral",
+            "sounds": [
+                "sounds/mob/pervert/pervert_attack1",
+                "sounds/mob/pervert/pervert_attack2",
+                "sounds/mob/pervert/pervert_attack3",
+                "sounds/mob/pervert/pervert_attack4",
+                "sounds/mob/pervert/pervert_attack5"
+            ]
+        },
+        "mob.pervert.hurt": {
+            "__use_legacy_max_distance": true,
+            "category": "neutral",
+            "sounds": [
+                "sounds/mob/pervert/pervert_hurt1",
+                "sounds/mob/pervert/pervert_hurt2",
+                "sounds/mob/pervert/pervert_hurt3"
+            ]
+        },
+        "mob.pervert.dead": {
+            "__use_legacy_max_distance": true,
+            "category": "neutral",
+            "sounds": [
+                "sounds/mob/pervert/pervert_dead1",
+                "sounds/mob/pervert/pervert_dead2"
+            ]
+        }
+    }
+}

@@ -1,0 +1,54 @@
+{
+    "format_version": "1.8.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "enscraft:pervert",
+            "min_engine_version": "1.8.0",
+            "materials": {"default": "zombie"},
+            "textures": {
+                "default": "textures/entity/pervert",
+                "party": "textures/entity/pervert_party",
+                "naked": "textures/entity/pervert_naked",
+                "sm": "textures/entity/pervert_sm",
+                "swinger": "textures/entity/pervert_swinger",
+                "blondy": "textures/entity/pervert_blondy",
+                "blacky": "textures/entity/pervert_blacky",
+                "oldy": "textures/entity/pervert_oldy"
+            },
+            "geometry": {"default": "geometry.pervert"},
+            "spawn_egg": {
+                "base_color": "#f21cf7",
+                "overlay_color": "#e15feb"
+            },
+            "scripts": {
+                "pre_animation": [
+                    "variable.tcos0 = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;"
+                ]
+            },
+            "animations": {
+                "attack": "animation.pervert.attack",
+                "long_dong": "animation.pervert.long_dong",
+                "look_at_target_default": "animation.humanoid.look_at_target.default",
+                "look_at_target_gliding": "animation.humanoid.look_at_target.gliding",
+                "look_at_target_swimming": "animation.humanoid.look_at_target.swimming",
+                "move": "animation.humanoid.move",
+                "swimming": "animation.humanoid.swimming"
+            },
+            "animation_controllers": [
+                {
+                    "look_at_target": "controller.animation.humanoid.look_at_target"
+                },
+                {"move": "controller.animation.humanoid.move"},
+                {
+                    "swimming": "controller.animation.humanoid.swimming"
+                },
+                {"fight": "controller.animation.pervert.fight"},
+                {
+                    "long_long": "controller.animation.pervert.long_long"
+                }
+            ],
+            "render_controllers": ["controller.render.pervert"],
+            "enable_attachables": true
+        }
+    }
+}

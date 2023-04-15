@@ -1,0 +1,202 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "enscraft:pervert",
+            "is_spawnable": true,
+            "is_summonable": true,
+            "is_experimental": false
+        },
+        "components": {
+            "minecraft:experience_reward": {
+                "on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
+            },
+            "minecraft:movement": {"value": 0.3},
+            "minecraft:nameable": {},
+            "minecraft:type_family": {
+                "family": ["monster", "mob", "ens"]
+            },
+            "minecraft:equip_item": {},
+            "minecraft:collision_box": {"width": 0.6, "height": 1.9},
+            "minecraft:movement.basic": {},
+            "minecraft:navigation.walk": {
+                "is_amphibious": true,
+                "can_pass_doors": true,
+                "can_walk": true,
+                "can_break_doors": true
+            },
+            "minecraft:annotation.break_door": {},
+            "minecraft:jump.static": {},
+            "minecraft:can_climb": {},
+            "minecraft:health": {"value": 25, "max": 25},
+            "minecraft:hurt_on_condition": {
+                "damage_conditions": [
+                    {
+                        "filters": {
+                            "test": "in_lava",
+                            "subject": "self",
+                            "operator": "==",
+                            "value": true
+                        },
+                        "cause": "lava",
+                        "damage_per_tick": 4
+                    }
+                ]
+            },
+            "minecraft:breathable": {
+                "total_supply": 15,
+                "suffocate_time": 0,
+                "breathes_air": true,
+                "breathes_water": true
+            },
+            "minecraft:attack": {"damage": 1},
+            "minecraft:loot": {
+                "table": "loot_tables/entities/pervert.json"
+            },
+            "minecraft:shareables": {
+                "items": [
+                    {
+                        "item": "minecraft:leather_boots",
+                        "want_amount": 1,
+                        "surplus_amount": 1,
+                        "priority": 2
+                    }
+                ]
+            },
+            "minecraft:despawn": {"despawn_from_distance": {}},
+            "minecraft:behavior.equip_item": {"priority": 5},
+            "minecraft:behavior.melee_attack": {"priority": 1},
+            "minecraft:behavior.pickup_items": {
+                "priority": 6,
+                "max_dist": 3,
+                "goal_radius": 2,
+                "speed_multiplier": 1,
+                "pickup_based_on_chance": true,
+                "can_pickup_any_item": true
+            },
+            "minecraft:behavior.random_stroll": {
+                "priority": 7,
+                "speed_multiplier": 1
+            },
+            "minecraft:behavior.look_at_player": {
+                "priority": 9,
+                "look_distance": 15,
+                "probability": 0.5
+            },
+            "minecraft:behavior.random_look_around": {"priority": 9},
+            "minecraft:behavior.hurt_by_target": {"priority": 1},
+            "minecraft:behavior.nearest_attackable_target": {
+                "priority": 2,
+                "must_see": true,
+                "reselect_targets": true,
+                "within_radius": 25,
+                "must_see_forget_duration": 17,
+                "entity_types": [
+                    {
+                        "filters": {
+                            "any_of": [
+                                {
+                                    "test": "is_family",
+                                    "subject": "other",
+                                    "value": "player"
+                                },
+                                {
+                                    "test": "is_family",
+                                    "subject": "other",
+                                    "value": "snowgolem"
+                                },
+                                {
+                                    "test": "is_family",
+                                    "subject": "other",
+                                    "value": "irongolem"
+                                },
+                                {
+                                    "test": "is_family",
+                                    "subject": "other",
+                                    "value": "villager"
+                                },
+                                {
+                                    "test": "is_family",
+                                    "subject": "other",
+                                    "value": "wandering_trader"
+                                },
+                                {
+                                    "test": "is_family",
+                                    "subject": "other",
+                                    "value": "animal"
+                                }
+                            ]
+                        },
+                        "max_dist": 35
+                    }
+                ]
+            },
+            "minecraft:physics": {},
+            "minecraft:pushable": {
+                "is_pushable": true,
+                "is_pushable_by_piston": true
+            },
+            "minecraft:conditional_bandwidth_optimization": {}
+        },
+        "component_groups": {
+            "pervert:default": {"minecraft:variant": {"value": 0}},
+            "pervert:party": {"minecraft:variant": {"value": 1}},
+            "pervert:naked": {"minecraft:variant": {"value": 2}},
+            "pervert:sm": {"minecraft:variant": {"value": 3}},
+            "pervert:swinger": {"minecraft:variant": {"value": 4}},
+            "pervert:blondy": {"minecraft:variant": {"value": 5}},
+            "pervert:blacky": {"minecraft:variant": {"value": 6}},
+            "pervert:oldy": {"minecraft:variant": {"value": 7}}
+        },
+        "events": {
+            "minecraft:entity_spawned": {
+                "randomize": [
+                    {
+                        "add": {
+                            "component_groups": ["pervert:default"]
+                        },
+                        "weight": 30
+                    },
+                    {
+                        "add": {
+                            "component_groups": ["pervert:party"]
+                        },
+                        "weight": 15
+                    },
+                    {
+                        "add": {
+                            "component_groups": ["pervert:naked"]
+                        },
+                        "weight": 10
+                    },
+                    {
+                        "add": {"component_groups": ["pervert:sm"]},
+                        "weight": 10
+                    },
+                    {
+                        "add": {
+                            "component_groups": ["pervert:swinger"]
+                        },
+                        "weight": 10
+                    },
+                    {
+                        "add": {
+                            "component_groups": ["pervert:blondy"]
+                        },
+                        "weight": 10
+                    },
+                    {
+                        "add": {
+                            "component_groups": ["pervert:blacky"]
+                        },
+                        "weight": 10
+                    },
+                    {
+                        "add": {"component_groups": ["pervert:oldy"]},
+                        "weight": 5
+                    }
+                ]
+            }
+        }
+    }
+}

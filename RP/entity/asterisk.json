@@ -1,0 +1,43 @@
+{
+    "format_version": "1.8.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "enscraft:asterisk",
+            "materials": {"default": "agent"},
+            "textures": {
+                "default": "textures/entity/asterisk",
+                "red": "textures/entity/asterisk_red",
+                "blue": "textures/entity/asterisk_blue",
+                "pink": "textures/entity/asterisk_pink",
+                "yellow": "textures/entity/asterisk_yellow",
+                "green": "textures/entity/asterisk_green"
+            },
+            "geometry": {"default": "geometry.asterisk"},
+            "scripts": {
+                "pre_animation": [
+                    "variable.attackMode = math.random_integer(1,4);"
+                ]
+            },
+            "animations": {
+                "attack1": "animation.asterisk.attack1",
+                "attack2": "animation.asterisk.attack2",
+                "attack3": "animation.asterisk.attack3",
+                "attack4": "animation.asterisk.attack4",
+                "walk": "animation.asterisk.walk"
+            },
+            "animation_controllers": [
+                {
+                    "movement": "controller.animation.asterisk.movement"
+                },
+                {
+                    "combat": "controller.animation.asterisk.combat"
+                }
+            ],
+            "render_controllers": ["controller.render.asterisk"],
+            "spawn_egg": {
+                "base_color": "#FF00FF",
+                "overlay_color": "#AA00FF"
+            }
+        }
+    }
+}

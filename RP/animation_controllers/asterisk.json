@@ -1,0 +1,70 @@
+{
+    "format_version": "1.19.50",
+    "animation_controllers": {
+        "controller.animation.asterisk.movement": {
+            "initial_state": "idle",
+            "states": {
+                "idle": {
+                    "blend_transition": 0.2,
+                    "transitions": [
+                        { "walking": "query.ground_speed" },
+                        { "swimming": "query.is_swimming" }
+                    ]
+                },
+                "walking": {
+                    "blend_transition": 0.2,
+                    "animations": [ "walk" ],
+                    "transitions": [
+                        { "idle": "!query.ground_speed" },
+                        { "swimming": "query.is_swimming" }
+                    ]
+                },
+                "swimming": {
+                    "blend_transition": 0.2,
+                    "animations": [ "walk" ],
+                    "transitions": [{ "idle": "!query.is_swimming" }]
+                }
+            }
+        },
+        "controller.animation.asterisk.combat": {
+            "states": {
+                "idle": {
+                    "transitions": [
+                        {
+                            "attacking_mode1": "variable.has_target && variable.attack_time > 0.0 && variable.attackMode == 1"
+                        },
+                        {
+                            "attacking_mode2": "variable.has_target && variable.attack_time > 0.0 && variable.attackMode == 2"
+                        },
+                        {
+                            "attacking_mode3": "variable.has_target && variable.attack_time > 0.0 && variable.attackMode == 3"
+                        },
+                        {
+                            "attacking_mode4": "variable.has_target && variable.attack_time > 0.0 && variable.attackMode == 4"
+                        }
+                    ]
+                },
+                "attacking_mode1": {
+                    "blend_transition": 0.5,
+                    "animations": [ "attack1" ],
+                    "transitions": [{ "idle": "variable.attack_time <= 0.0" }]
+                },
+                "attacking_mode2": {
+                    "blend_transition": 0.5,
+                    "animations": [ "attack2" ],
+                    "transitions": [{ "idle": "variable.attack_time <= 0.0" }]
+                },
+                "attacking_mode3": {
+                    "blend_transition": 0.5,
+                    "animations": [ "attack3" ],
+                    "transitions": [{ "idle": "variable.attack_time <= 0.0" }]
+                },
+                "attacking_mode4": {
+                    "blend_transition": 0.5,
+                    "animations": [ "attack4" ],
+                    "transitions": [{ "idle": "variable.attack_time <= 0.0" }]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "format_version": "1.10.0",
+    "animations": {
+        "animation.summon": {
+            "timeline": {
+                "0.0": ["/say Das werde ich dir heimzahlen, Maskulines Suffix!"],
+                "0.5": ["/summon enscraft:asterisk"],
+                "1.0": ["/summon enscraft:asterisk"],
+                "1.5": ["/summon enscraft:asterisk"],
+                "2.0": ["/summon enscraft:asterisk"],
+                "2.5": ["/summon enscraft:asterisk"],
+                "3.0": ["/summon enscraft:asterisk"]
+            },
+            "animation_length": 3
+        },
+        "animation.angry": {"timeline": {"1.0": ["/say Mach dich bereit zu sterben, ens Hurens!"]}}
+    }
+}
