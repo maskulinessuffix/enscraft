@@ -3,7 +3,7 @@
     "animations": {
         "animation.summon": {
             "timeline": {
-                "0.0": ["/say Das werde ich dir heimzahlen, Maskulines Suffix!"],
+                "0.0": ["/say Ens ens ens!"],
                 "0.5": ["/summon enscraft:asterisk"],
                 "1.0": ["/summon enscraft:asterisk"],
                 "1.5": ["/summon enscraft:asterisk"],
